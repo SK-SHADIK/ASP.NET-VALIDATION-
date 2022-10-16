@@ -1,0 +1,56 @@
+﻿
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<title>FORM</title>
+<h2>Index</h2>
+
+<form action="" method="post">
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">USER NAME</label>
+        <input type="text" name="Name" class="form-control" placeholder="ENTER USER NAME" value="@(Model ==null ? "" : Model.Name)" />
+        <div class="text-danger"> @Html.ValidationMessage("Name")</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">ID</label>
+        <input type="text" name="Id" class="form-control" placeholder="ENTER ID Ex. 11-11111-1" value="@(Model ==null ? "" : Model.Id)" />
+        <div class="text-danger"> @Html.ValidationMessage("Id")</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">Email</label>
+        <input type="text" name="Email" class="form-control" placeholder="ENTER EMAIL Ex. abc@gmail.com" value="@(Model ==null ? "" : Model.Email)" />
+        <div class="text-danger"> @Html.ValidationMessage("Email")</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">Email</label>
+        <input type="text" name="Emailb" class="form-control" placeholder="ENTER EMAIL Ex. 11-11111-1@aiub.edu" value="@(Model ==null ? "" : Model.Emailb)" />
+        <div class="text-danger"> @Html.ValidationMessage("Emailb")</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">DATE OF BIRTH</label>
+        <input type="text" name="Dob" class="form-control" placeholder="ENTER DATE OF BIRTH" value="@(Model ==null ? "" : Model.Dob)" />
+        <div class="text-danger"> @Html.ValidationMessage("Dob")</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">AGE</label>
+        <input type="text" name="Age" class="form-control" placeholder="ENTER AGE" value="@(Model ==null ? "" : Model.Age)" />
+        <div class="text-danger"> @Html.ValidationMessage("Age")</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">PHONE NUMBER</label>
+        <input type="text" name="Phn" class="form-control" placeholder="ENTER PHONE NUMBER" value="@(Model ==null ? "" : Model.Phn)" />
+        <div class="text-danger"> @Html.ValidationMessage("Phn")</div>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" style="margin-top:20px; margin-left:10px;">ADDRESS</label>
+        <input type="text" name="Add" class="form-control" placeholder="ENTER ADDRESS" value="@(Model ==null ? "" : Model.Add)" />
+        <div class="text-danger"> @Html.ValidationMessage("Add")</div>
+    </div>
+
+
+    <input type="submit" class="btn btn-success" style="margin-top:10px; margin-left:10px;" value="DONE" />
+
+</form>
+
