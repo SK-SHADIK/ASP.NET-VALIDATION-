@@ -39,6 +39,19 @@ namespace VALIDATION.Models
         [RegularExpression("^[+]{1}[8]{2}[0-9]{11}$", ErrorMessage = "Please provide a valid phone number (like +8801711223344)")]
         public string Phn { get; set; }
 
+        public string Bg { get; set; }
+
+        public string Gnd { get; set; }
+
+        [Required(ErrorMessage = "Please provide password")]
+        [RegularExpression("^[A-Za-z0-9@#$]{8,}$", ErrorMessage = "Please provide minimum 8 charecter for password. Also symbol @,#,$ is allow")]
+        //[RegularExpression("^[+]{1}[8]{2}[0-9]{11}$", ErrorMessage = "Please provide minimum 8 charecter for password")]
+        public string Pass { get; set; }
+
+        [Required(ErrorMessage = "Please provide confirm password")]
+        [Compare("Pass", ErrorMessage ="Confirm password is not macth with password. Please check and try again")]
+        public string Cpass { get; set; }
+
         [Required(ErrorMessage = "Please provide address")]
         public string Add { get; set; }
     }

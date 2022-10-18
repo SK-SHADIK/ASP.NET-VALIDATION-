@@ -43,6 +43,43 @@
         <input type="text" name="Phn" class="form-control" placeholder="ENTER PHONE NUMBER" value="@(Model ==null ? "" : Model.Phn)" />
         <div class="text-danger"> @Html.ValidationMessage("Phn")</div>
     </div>
+
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">BLOOD GROUP</label>
+        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option selected>SELECT BLOOD GROUP</option>
+            <option value="1">O+</option>
+            <option value="2">O-</option>
+            <option value="3">A+</option>
+            <option value="4">A-</option>
+            <option value="5">B+</option>
+            <option value="6">B-</option>
+            <option value="7">AB+</option>
+            <option value="8">AB-</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">GENDER</label>
+        <input type="radio" name="gender" />Female
+        <input type="radio" name="gender" />Male
+        <input type="radio" name="gender" />Other
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">PASSWORD</label>
+        <input type="text" name="Pass" class="form-control" placeholder="ENTER PASSWORD" value="@(Model ==null ? "" : Model.Pass)" />
+        <div class="text-danger"> @Html.ValidationMessage("Pass")</div>
+    </div>
+
+
+    <div class="mb-3">
+        <label class="form-label" style="margin-top: 20px; margin-left: 10px;">CONFIRM PASSWORD</label>
+        <input type="text" name="Cpass" class="form-control" placeholder="ENTER PASSWORD" value="@(Model ==null ? "" : Model.Cpass)" />
+        <div class="text-danger"> @Html.ValidationMessage("Cpass")</div>
+    </div>
+
+
     <div class="mb-3">
         <label class="form-label" style="margin-top:20px; margin-left:10px;">ADDRESS</label>
         <input type="text" name="Add" class="form-control" placeholder="ENTER ADDRESS" value="@(Model ==null ? "" : Model.Add)" />
